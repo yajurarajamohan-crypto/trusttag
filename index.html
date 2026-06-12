@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrustTag - Scan Before You Trust</title>
+    <title>TrustTag - QR-Based Identity Verification Platform</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">TrustTag</div>
+            <div class="logo">🔐 TrustTag</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="registration.html">Register</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -22,48 +25,222 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="safety-banner">
+            ⚠️ <strong>Safety First:</strong> Always verify service providers before granting access. Scan their QR code with TrustTag.
+        </div>
         <div class="container">
-            <h1>TrustTag</h1>
-            <h2>Scan Before You Trust</h2>
-            <p>Verify delivery agents, drivers, couriers, and service providers with secure QR code authentication</p>
-            <button class="cta-button" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+            <div class="hero-content">
+                <h1>TrustTag</h1>
+                <h2>Scan Before You Trust</h2>
+                <p>Prevent identity fraud. Verify service providers instantly with secure QR code authentication.</p>
+                <p class="hero-subtitle">Protect yourself, your family, and your loved ones from impersonation scams.</p>
+                <div class="hero-buttons">
+                    <a href="registration.html" class="cta-button">Get Started Now</a>
+                    <a href="#how-it-works" class="secondary-button">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-graphic">
+                    <div class="qr-demo">📱</div>
+                    <div class="check-mark">✓</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
         <div class="container">
-            <h2>Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">👤</div>
-                    <h3>User Registration</h3>
-                    <p>Simple and secure registration for customers to verify service providers</p>
+            <h2>Why Choose TrustTag?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">👨‍💼</div>
+                    <h3>For Service Providers</h3>
+                    <p>Build trust with customers. Get verified digital identity. Increase client confidence and bookings.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏢</div>
-                    <h3>Company Registration</h3>
-                    <p>Businesses can register and manage their service providers</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👥</div>
+                    <h3>For Organizations</h3>
+                    <p>Manage employee verification. Track workforce authenticity. Enhance brand reputation and safety.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>QR Code Generation</h3>
-                    <p>Automatically generate unique QR codes for each service provider</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👨‍👩‍👧</div>
+                    <h3>For Customers</h3>
+                    <p>Verify identities instantly. Protect your family. Stay safe from impersonation and fraud.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">✅</div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Enhanced Security</h3>
+                    <p>Secure QR technology. Encrypted data. Real-time verification with audit trails.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👩‍🦰</div>
+                    <h3>Women's Safety</h3>
+                    <p>Extra protection for women. Verify drivers, delivery agents, and service personnel.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👴</div>
+                    <h3>Elderly Protection</h3>
+                    <p>Safeguard senior citizens. Prevent fraud targeting vulnerable populations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About TrustTag</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>To create a safer digital ecosystem by enabling instant identity verification through secure QR technology. We aim to prevent fraud, protect vulnerable populations, and build trust between customers and service providers.</p>
+                    
+                    <h3>Our Vision</h3>
+                    <p>A world where every service interaction is secure, transparent, and verified. Where customers feel safe and service providers are valued for their authenticity.</p>
+                    
+                    <h3>Why TrustTag Was Created</h3>
+                    <ul>
+                        <li>Prevent identity-based fraud and impersonation</li>
+                        <li>Reduce crimes involving fake delivery agents and unauthorized drivers</li>
+                        <li>Improve public safety during service interactions</li>
+                        <li>Support women's safety initiatives</li>
+                        <li>Protect elderly citizens from scams</li>
+                        <li>Create accountability and transparency in service industry</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <h4>Target Users</h4>
+                        <p>Delivery Partners, Drivers, Technicians, Couriers & Service Personnel</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Organizations Served</h4>
+                        <p>Delivery Companies, Ride-Sharing Platforms, Healthcare & Security Services</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Impact</h4>
+                        <p>Enhanced Safety for Families, Women & Elderly Citizens</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>How TrustTag Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Service Provider Registration</h3>
+                    <p>Individual service providers or organizations register on TrustTag with verified details, photo, and ID proof.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">2</div>
                     <h3>Identity Verification</h3>
-                    <p>Verify the authenticity of service providers in real-time</p>
+                    <p>Admin team verifies documents, background, and credentials for authenticity and safety compliance.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h3>Premium Plans</h3>
-                    <p>Access advanced features with our premium subscription</p>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>QR Code Generation</h3>
+                    <p>Unique QR code is generated containing verified identity details and security credentials.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h3>24/7 Support</h3>
-                    <p>Round-the-clock customer support for all your needs</p>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Share Your QR Code</h3>
+                    <p>Service provider displays QR code on ID badge, vehicle, or delivery package for customer verification.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Customer Verification</h3>
+                    <p>Customer scans QR code to instantly view verified identity, photo, company name, and verification status.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Users Section -->
+    <section id="users" class="target-users">
+        <div class="container">
+            <h2>Who Uses TrustTag?</h2>
+            
+            <div class="user-category">
+                <h3>🚚 Service Providers</h3>
+                <div class="users-grid">
+                    <div class="user-type">
+                        <span class="user-icon">📦</span>
+                        <p>Delivery Partners</p>
+                    </div>
+                    <div class="user-type">
+                        <span class="user-icon">🚗</span>
+                        <p>Taxi/Ola/Rapido Drivers</p>
+                    </div>
+                    <div class="user-type">
+                        <span class="user-icon">🔧</span>
+                        <p>Electricians & Plumbers</p>
+                    </div>
+                    <div class="user-type">
+                        <span class="user-icon">🛠️</span>
+                        <p>Technicians</p>
+                    </div>
+                    <div class="user-type">
+                        <span class="user-icon">🚨</span>
+                        <p>Security Personnel</p>
+                    </div>
+                    <div class="user-type">
+                        <span class="user-icon">🏥</span>
+                        <p>Healthcare Workers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-category">
+                <h3>🏢 Organizations</h3>
+                <div class="users-grid">
+                    <div class="user-type">
+                        <span class="user-icon">📮</span>
+                        <p>Delivery Companies</p>
+                    </div>
+                    <div class="user-type">
+                        <span class="user-icon">🚗</span>
+                        <p>Ride-Sharing Platforms</p>
+                    </div>
+                    <div class="user-type">
+                        <span class="user-icon">🏭</span>
+                        <p>Service Companies</p>
+                    </div>
+                    <div class="user-type">
+                        <span class="user-icon">🏥</span>
+                        <p>Healthcare Organizations</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-category">
+                <h3>👥 Customers</h3>
+                <div class="users-grid">
+                    <div class="user-type">
+                        <span class="user-icon">👨‍👩‍👧</span>
+                        <p>Families</p>
+                    </div>
+                    <div class="user-type">
+                        <span class="user-icon">👩</span>
+                        <p>Women</p>
+                    </div>
+                    <div class="user-type">
+                        <span class="user-icon">👴</span>
+                        <p>Elderly Citizens</p>
+                    </div>
+                    <div class="user-type">
+                        <span class="user-icon">🏢</span>
+                        <p>Apartment Residents</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,37 +252,70 @@
             <h2>Pricing Plans</h2>
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>Free</h3>
+                    <h3>Free Plan</h3>
                     <p class="price">$0<span>/month</span></p>
                     <ul>
-                        <li>✓ Basic verification</li>
-                        <li>✓ 10 QR scans/month</li>
-                        <li>✓ Email support</li>
-                        <li>✗ Advanced features</li>
+                        <li>✓ Basic QR Code Generation</li>
+                        <li>✓ Profile Creation</li>
+                        <li>✓ Basic Verification</li>
+                        <li>✓ Download QR Code</li>
+                        <li>✗ Advanced Analytics</li>
+                        <li>✗ Priority Support</li>
                     </ul>
                     <button class="pricing-button">Get Started</button>
                 </div>
+
                 <div class="pricing-card featured">
-                    <h3>Professional</h3>
-                    <p class="price">$9<span>/month</span></p>
+                    <div class="badge">Most Popular</div>
+                    <h3>Premium Plan</h3>
+                    <p class="price">$9.99<span>/month</span></p>
                     <ul>
-                        <li>✓ Unlimited verification</li>
-                        <li>✓ Unlimited QR scans</li>
-                        <li>✓ Priority email support</li>
-                        <li>✓ Advanced analytics</li>
+                        <li>✓ All Free Features</li>
+                        <li>✓ Advanced Verification</li>
+                        <li>✓ Background Check</li>
+                        <li>✓ Analytics Dashboard</li>
+                        <li>✓ Priority Customer Support</li>
+                        <li>✓ Enhanced Security Features</li>
                     </ul>
                     <button class="pricing-button">Subscribe Now</button>
                 </div>
+
                 <div class="pricing-card">
-                    <h3>Enterprise</h3>
+                    <h3>Enterprise Plan</h3>
                     <p class="price">Custom</p>
                     <ul>
-                        <li>✓ Everything in Professional</li>
-                        <li>✓ Dedicated support</li>
-                        <li>✓ Custom integration</li>
-                        <li>✓ API access</li>
+                        <li>✓ All Premium Features</li>
+                        <li>✓ Bulk Employee Verification</li>
+                        <li>✓ Dedicated Account Manager</li>
+                        <li>✓ Custom Integration</li>
+                        <li>✓ API Access</li>
+                        <li>✓ 24/7 Priority Support</li>
                     </ul>
                     <button class="pricing-button">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback & Ratings Section -->
+    <section id="feedback" class="feedback">
+        <div class="container">
+            <h2>Customer Feedback</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"TrustTag gives me peace of mind when delivery agents arrive at my home. I always scan the QR code first!"</p>
+                    <p class="author">- Priya M., Mumbai</p>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"As a delivery agent, having a verified QR code has increased my customer confidence and bookings significantly."</p>
+                    <p class="author">- Rajesh K., Bangalore</p>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"My elderly mother now feels safe when service providers visit. TrustTag is a game-changer for family safety."</p>
+                    <p class="author">- Anjali S., Delhi</p>
                 </div>
             </div>
         </div>
@@ -115,16 +325,53 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Get In Touch</h2>
-            <form class="contact-form" onsubmit="handleSubmit(event)">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="cta-button">Send Message</button>
-            </form>
-            <div class="contact-info">
-                <p>📧 Email: support@trusttag.com</p>
-                <p>📱 Phone: +1 (555) 123-4567</p>
-                <p>📍 Address: 123 Trust Street, Tech City, TC 12345</p>
+            <div class="contact-content">
+                <div class="contact-form-box">
+                    <h3>Send us a Message</h3>
+                    <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <span class="info-icon">📧</span>
+                        <div>
+                            <p><strong>Email</strong></p>
+                            <p>support@trusttag.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📱</span>
+                        <div>
+                            <p><strong>Phone</strong></p>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <p><strong>Address</strong></p>
+                            <p>123 Trust Street, Tech City, TC 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⏰</span>
+                        <div>
+                            <p><strong>Hours</strong></p>
+                            <p>24/7 Support Available</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -132,7 +379,40 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 TrustTag. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TrustTag</h4>
+                    <p>Scan Before You Trust - QR-Based Identity Verification Platform</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TrustTag. All rights reserved. | Protecting Public Safety Through Verified Identities</p>
+            </div>
         </div>
     </footer>
 
