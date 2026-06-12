@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TrustTag</title>
+</head>
+<body>
+    <h1>TrustTag</h1>
+    <h2>Scan Before You Trust</h2>
+
+    <p>
+        TrustTag is a QR-based identity verification platform that helps
+        people verify delivery agents, drivers, couriers, and service
+        providers through secure QR authentication.
+    </p>
+
+    <h3>Features</h3>
+    <ul>
+        <li>User Registration</li>
+        <li>Company Registration</li>
+        <li>QR Code Generation</li>
+        <li>Identity Verification</li>
+        <li>Premium Plans</li>
+        <li>Contact Support</li>
+    </ul>
+</body>
+</html>
