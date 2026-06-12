@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustTag - Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🔐 TrustTag - Admin</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Admin Container -->
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <div class="menu-item active" onclick="showSection('dashboard')">
+                    <span class="menu-icon">📊</span>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item" onclick="showSection('pending-users')">
+                    <span class="menu-icon">⏳</span>
+                    <span>Pending Users</span>
+                </div>
+                <div class="menu-item" onclick="showSection('verified-users')">
+                    <span class="menu-icon">✅</span>
+                    <span>Verified Users</span>
+                </div>
+                <div class="menu-item" onclick="showSection('rejected-users')">
+                    <span class="menu-icon">❌</span>
+                    <span>Rejected Users</span>
+                </div>
+                <div class="menu-item" onclick="showSection('reports')">
+                    <span class="menu-icon">📈</span>
+                    <span>Reports</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="section active">
+                <div class="section-header">
+                    <h1>Admin Dashboard</h1>
+                    <p>Overview of TrustTag Registration and Verification System</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <h3>Total Users</h3>
+                        <p class="stat-number" id="totalUsers">0</p>
+                    </div>
+                    <div class="stat-card pending">
+                        <div class="stat-icon">⏳</div>
+                        <h3>Pending Verification</h3>
+                        <p class="stat-number" id="pendingCount">0</p>
+                    </div>
+                    <div class="stat-card verified">
+                        <div class="stat-icon">✅</div>
+                        <h3>Verified</h3>
+                        <p class="stat-number" id="verifiedCount">0</p>
+                    </div>
+                    <div class="stat-card rejected">
+                        <div class="stat-icon">❌</div>
+                        <h3>Rejected</h3>
+                        <p class="stat-number" id="rejectedCount">0</p>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div id="activityFeed" class="activity-feed">
+                        <!-- Activity items will be populated here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pending Users Section -->
+            <section id="pending-users" class="section">
+                <div class="section-header">
+                    <h1>Pending Verification</h1>
+                    <p>Review and verify new user registrations</p>
+                </div>
+
+                <div id="pendingUsersList" class="users-list">
+                    <!-- Pending users will be populated here -->
+                </div>
+            </section>
+
+            <!-- Verified Users Section -->
+            <section id="verified-users" class="section">
+                <div class="section-header">
+                    <h1>Verified Users</h1>
+                    <p>List of verified and approved users</p>
+                </div>
+
+                <div id="verifiedUsersList" class="users-list">
+                    <!-- Verified users will be populated here -->
+                </div>
+            </section>
+
+            <!-- Rejected Users Section -->
+            <section id="rejected-users" class="section">
+                <div class="section-header">
+                    <h1>Rejected Users</h1>
+                    <p>Users with rejected registrations</p>
+                </div>
+
+                <div id="rejectedUsersList" class="users-list">
+                    <!-- Rejected users will be populated here -->
+                </div>
+            </section>
+
+            <!-- Reports Section -->
+            <section id="reports" class="section">
+                <div class="section-header">
+                    <h1>Reports & Analytics</h1>
+                    <p>Platform statistics and insights</p>
+                </div>
+
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <h3>Verification Statistics</h3>
+                        <div class="chart-placeholder">
+                            <p>Verification Rate: <strong id="verificationRate">0</strong>%</p>
+                            <p>Average Verification Time: <strong>2-3 hours</strong></p>
+                            <p>Total Registrations: <strong id="totalRegistrations">0</strong></p>
+                        </div>
+                    </div>
+                    <div class="report-card">
+                        <h3>User Distribution</h3>
+                        <div class="chart-placeholder">
+                            <p>Service Providers: <strong id="providerCount">0</strong></p>
+                            <p>Customers: <strong id="customerCount">0</strong></p>
+                            <p>Companies: <strong id="companyCount">0</strong></p>
+                        </div>
+                    </div>
+                    <div class="report-card">
+                        <h3>Platform Health</h3>
+                        <div class="chart-placeholder">
+                            <p>System Status: <strong style="color: #28a745;">✓ Healthy</strong></p>
+                            <p>API Response: <strong>45ms</strong></p>
+                            <p>Database: <strong style="color: #28a745;">✓ Connected</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- User Detail Modal -->
+    <div id="userDetailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <h2>User Details & Verification</h2>
+            </div>
+            <div class="modal-body">
+                <div class="user-detail-grid">
+                    <div class="detail-section">
+                        <h3>Personal Information</h3>
+                        <div class="detail-item">
+                            <label>Name:</label>
+                            <p id="modalName"></p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Email:</label>
+                            <p id="modalEmail"></p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Phone:</label>
+                            <p id="modalPhone"></p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Role:</label>
+                            <p id="modalRole"></p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Registration Date:</label>
+                            <p id="modalRegDate"></p>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>ID Proof</h3>
+                        <div id="idProofPreview" class="proof-preview">
+                            <p>ID Proof: <strong id="modalIdProof">-</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verification-actions">
+                    <h3>Verification Actions</h3>
+                    <div class="action-buttons">
+                        <button class="btn-approve" onclick="approveUser()">✓ Approve & Generate QR</button>
+                        <button class="btn-reject" onclick="rejectUserModal()">✗ Reject Registration</button>
+                    </div>
+                </div>
+
+                <div id="rejectionReason" class="rejection-reason hidden">
+                    <h4>Reason for Rejection:</h4>
+                    <textarea id="reasonText" placeholder="Enter reason for rejection..."></textarea>
+                    <button class="btn-reject" onclick="submitRejection()">Submit Rejection</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TrustTag Admin Panel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
