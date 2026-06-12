@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustTag - Scan Before You Trust</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">TrustTag</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>TrustTag</h1>
+            <h2>Scan Before You Trust</h2>
+            <p>Verify delivery agents, drivers, couriers, and service providers with secure QR code authentication</p>
+            <button class="cta-button" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👤</div>
+                    <h3>User Registration</h3>
+                    <p>Simple and secure registration for customers to verify service providers</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏢</div>
+                    <h3>Company Registration</h3>
+                    <p>Businesses can register and manage their service providers</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>QR Code Generation</h3>
+                    <p>Automatically generate unique QR codes for each service provider</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Identity Verification</h3>
+                    <p>Verify the authenticity of service providers in real-time</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Premium Plans</h3>
+                    <p>Access advanced features with our premium subscription</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support for all your needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Pricing Plans</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <p class="price">$0<span>/month</span></p>
+                    <ul>
+                        <li>✓ Basic verification</li>
+                        <li>✓ 10 QR scans/month</li>
+                        <li>✓ Email support</li>
+                        <li>✗ Advanced features</li>
+                    </ul>
+                    <button class="pricing-button">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Professional</h3>
+                    <p class="price">$9<span>/month</span></p>
+                    <ul>
+                        <li>✓ Unlimited verification</li>
+                        <li>✓ Unlimited QR scans</li>
+                        <li>✓ Priority email support</li>
+                        <li>✓ Advanced analytics</li>
+                    </ul>
+                    <button class="pricing-button">Subscribe Now</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <p class="price">Custom</p>
+                    <ul>
+                        <li>✓ Everything in Professional</li>
+                        <li>✓ Dedicated support</li>
+                        <li>✓ Custom integration</li>
+                        <li>✓ API access</li>
+                    </ul>
+                    <button class="pricing-button">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p>📧 Email: support@trusttag.com</p>
+                <p>📱 Phone: +1 (555) 123-4567</p>
+                <p>📍 Address: 123 Trust Street, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TrustTag. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
