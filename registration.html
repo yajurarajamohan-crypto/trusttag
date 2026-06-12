@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustTag - Registration & QR Code</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="registration.css">
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">TrustTag</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Login Section -->
+        <div id="loginSection" class="auth-section">
+            <div class="auth-container">
+                <h2>Login to TrustTag</h2>
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="loginEmail">Email:</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password:</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="auth-button">Login</button>
+                </form>
+                <p class="toggle-text">Don't have an account? <a href="#" onclick="toggleForms()">Register here</a></p>
+            </div>
+        </div>
+
+        <!-- Registration Section -->
+        <div id="registrationSection" class="auth-section hidden">
+            <div class="auth-container">
+                <h2>Create TrustTag Account</h2>
+                <form id="registrationForm" onsubmit="handleRegistration(event)">
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userRole">I am a:</label>
+                        <select id="userRole" required>
+                            <option value="">Select Role</option>
+                            <option value="customer">Customer</option>
+                            <option value="provider">Service Provider (Delivery/Courier/Driver)</option>
+                            <option value="company">Company</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="auth-button">Register</button>
+                </form>
+                <p class="toggle-text">Already have an account? <a href="#" onclick="toggleForms()">Login here</a></p>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboardSection" class="dashboard hidden">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h2>Welcome, <span id="userName"></span>!</h2>
+                    <p id="userRole"></p>
+                </div>
+
+                <div class="dashboard-content">
+                    <!-- User Info Card -->
+                    <div class="info-card">
+                        <h3>Your Profile</h3>
+                        <div class="user-details">
+                            <p><strong>Name:</strong> <span id="displayName"></span></p>
+                            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+                            <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+                            <p><strong>Role:</strong> <span id="displayRole"></span></p>
+                            <p><strong>User ID:</strong> <span id="displayId"></span></p>
+                        </div>
+                    </div>
+
+                    <!-- QR Code Card -->
+                    <div class="qr-card">
+                        <h3>Your Verification QR Code</h3>
+                        <p>Share this QR code to verify your identity</p>
+                        <div id="qrCode" class="qr-container"></div>
+                        <div class="qr-actions">
+                            <button class="action-button" onclick="downloadQRCode()">📥 Download QR Code</button>
+                            <button class="action-button" onclick="printQRCode()">🖨️ Print QR Code</button>
+                            <button class="action-button" onclick="generateNewQR()">🔄 Generate New QR</button>
+                        </div>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="stats-card">
+                        <h3>Account Statistics</h3>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <span class="stat-value" id="qrScans">0</span>
+                                <span class="stat-label">QR Scans</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value" id="verifications">0</span>
+                                <span class="stat-label">Verifications</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value" id="joinDate"></span>
+                                <span class="stat-label">Member Since</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TrustTag. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="registration.js"></script>
+</body>
+</html>
